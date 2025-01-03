@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://backend-beryl-omega.vercel.app/", // Allow requests from all domains
+    origin: "*", // Allow requests from all domains
     methods: "GET,POST,DELETE", // Allow specific methods
     allowedHeaders: "Content-Type", // Allow specific headers
   })
