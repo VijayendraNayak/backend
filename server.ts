@@ -15,6 +15,11 @@ app.use(
 
 connectDb();
 app.use(express.json());
+// Root route (just a placeholder)
+app.get("/", (req, res) => {
+  res.send("Backend is up and running!");
+});
+
 app.use("/api", reserveRouter);
 
 // Export the app as a default export to make it compatible with Vercel
