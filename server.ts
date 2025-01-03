@@ -7,11 +7,12 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://vijayendra-todo-list.vercel.app", // Replace with your front-end URL
-    methods: "GET,POST,DELETE", // Correctly separate methods with commas
-    allowedHeaders: "Content-Type", // Allowed headers
+    origin: "*", // Allow requests from all domains
+    methods: "GET,POST,DELETE", // Allow specific methods
+    allowedHeaders: "Content-Type", // Allow specific headers
   })
 );
+
 
 connectDb();
 app.use(express.json());
